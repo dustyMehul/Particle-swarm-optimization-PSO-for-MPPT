@@ -1,0 +1,11 @@
+close all;
+clear all;
+clc;
+
+Table = xlsread('LookupTable2.xls');
+plot(0,0,'c.');
+hold;
+
+for i=1:1000
+    plot(i/1000,getPower(i/1000,Table),'r*');
+end
